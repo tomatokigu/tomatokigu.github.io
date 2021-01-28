@@ -30,6 +30,6 @@ jobs:
 
       - run: yarn install --frozen-lockfile
  
-      - uses: helaili/jekyll-action@2.0.5
+      - uses: helaili/jekyll-action@2
         with:
           token: ${{ secrets.JEKYLL_PAT }}
