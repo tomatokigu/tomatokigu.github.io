@@ -59,8 +59,8 @@ sass:
 # their entries' file path in the `include:` list.
 #
 exclude:
-  package.json
-  yarn.lock
+  - package.json
+  - yarn.lock
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
