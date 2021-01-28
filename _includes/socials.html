@@ -1,0 +1,4 @@
+{% for social in site.socials %}
+	{% assign partial = 'partials/social-' | append: social[0] | append: '.html' %}
+	{% include {{ partial }} %}
+{% endfor %}

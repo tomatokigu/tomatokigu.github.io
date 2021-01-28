@@ -1,0 +1,66 @@
+---
+---
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import 'bulma-settings';
+@import 'node_modules/bulma/bulma';
+{% if site.socials.kofi %}
+$brand-url-kofi:      "{{ site.socials.kofi }}";
+{% endif %}
+{% if site.socials.discord %}
+$brand-url-discord:   "{{ site.socials.discord }}";
+{% endif %}
+{% if site.socials.twitch %}
+$brand-url-twitch:    "{{ site.socials.twitch }}";
+{% endif %}
+{% if site.socials.twitter %}
+$brand-url-twitter:   "{{ site.socials.twitter }}";
+{% endif %}
+{% if site.socials.youtube %}
+$brand-url-youtube:   "{{ site.socials.youtube }}";
+{% endif %}
+{% if site.socials.patreon %}
+$brand-url-patreon:   "{{ site.socials.patreon }}";
+{% endif %}
+{% if site.socials.tumblr %}
+$brand-url-tumblr:    "{{ site.socials.tumblr }}";
+{% endif %}
+{% if site.socials.instagram %}
+$brand-url-instagram: "{{ site.socials.instagram }}";
+{% endif %}
+{% if site.socials.facebook %}
+$brand-url-facebook:  "{{ site.socials.facebook }}";
+{% endif %}
+@import 'socials';
+
+p {
+	+ p {
+		margin-top: 0.75em;
+	}
+	+ ul {
+		margin-top: 0.75em;
+	}
+}
+.has-text-grey-light {
+	a {
+		color: $grey;
+	}
+}
+h2, h3 {
+	margin-bottom: 0.25em !important;
+	&:not(:first-child) {
+		margin-top: 0.75em;
+	}
+}
+ul.list {
+	list-style: initial;
+	li {
+		margin-left: 1.25rem;
+		+ li {
+			margin-top: 0.25em;
+		}
+	}
+	+ p {
+		margin-top: 0.75em;
+	}
+}

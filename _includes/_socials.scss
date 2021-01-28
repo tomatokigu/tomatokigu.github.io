@@ -1,0 +1,110 @@
+$brand-colour-discord:   #7289DA;
+$brand-colour-facebook:  #1778f2;
+$brand-colour-instagram: #f00a75;
+$brand-colour-kofi:      #FF5E5B;
+$brand-colour-patreon:   #FF424D;
+$brand-colour-tumblr:    #35465c;
+$brand-colour-twitch:    #9146FF;
+$brand-colour-twitter:   #1DA1F2;
+$brand-colour-youtube:   #FF0000;
+
+$brand-url-discord:   false !default;
+$brand-url-facebook:  false !default;
+$brand-url-instagram: false !default;
+$brand-url-kofi:      false !default;
+$brand-url-patreon:   false !default;
+$brand-url-tumblr:    false !default;
+$brand-url-twitch:    false !default;
+$brand-url-twitter:   false !default;
+$brand-url-youtube:   false !default;
+
+a.social {
+	@extend .button;
+	color: #fff !important;
+	font-weight: bold;
+	i {
+		@extend .fab;
+		@extend .fa-fw;		
+	}
+
+	@if $brand-url-kofi {
+		&[href="#{$brand-url-kofi}"] {
+			background-color: $brand-colour-kofi;
+			img { 
+				height: 2em; 
+				margin-right: 0.1em; 
+				margin-top: -0.1em;
+			}
+		}
+	}
+	@if $brand-url-discord {
+		&[href="#{$brand-url-discord}"] {
+			background-color: $brand-colour-discord;
+			i { @extend .fa-discord; }
+		}
+	}
+	@if $brand-url-twitch {
+		&[href="#{$brand-url-twitch}"] {
+			background-color: $brand-colour-twitch;
+			i { @extend .fa-twitch; }
+		}
+	}
+	@if $brand-url-twitter {
+		&[href="#{$brand-url-twitter}"] {
+			background-color: $brand-colour-twitter;
+			i { @extend .fa-twitter; }
+		}
+	}
+	@if $brand-url-youtube {
+		&[href="#{$brand-url-youtube}"] {
+			background-color: $brand-colour-youtube;
+			i { @extend .fa-youtube; }
+		}
+	}
+	@if $brand-url-patreon {
+		&[href="#{$brand-url-patreon}"] {
+			background-color: $brand-colour-patreon;
+			i { @extend .fa-patreon; }
+		}
+	}
+	@if $brand-url-tumblr {
+		&[href="#{$brand-url-tumblr}"] {
+			background-color: $brand-colour-tumblr;
+			i { @extend .fa-tumblr; }
+		}
+	}
+	@if $brand-url-instagram {
+		&[href="#{$brand-url-instagram}"] {
+			background-color: $brand-colour-instagram;
+			i { @extend .fa-instagram; }
+		}
+	}
+	@if $brand-url-facebook {
+		&[href="#{$brand-url-facebook}"] {
+			background-color: $brand-colour-facebook;
+			i { @extend .fa-facebook; }
+		}
+	}
+}
+
+a.social.expand {
+	@extend .social;
+	@extend .is-fullwidth;	
+	+ a.social.expand {
+		margin-top: 0.75rem;
+	}
+	@if $brand-url-kofi {
+		&[href="#{$brand-url-kofi}"] {
+			background-color: #FF5E5B;
+		}
+	}
+}
+a.social.large {
+	@extend .social;
+	@extend .is-large;
+	@if $brand-url-kofi {
+		&[href="#{$brand-url-kofi}"] {
+			background-color: #FF5E5B;
+		}
+	}
+}
